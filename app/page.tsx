@@ -1,29 +1,47 @@
 import Link from "next/link";
-import Image from "next/image";
-import styles from "./page.module.css";
+import Head from "next/head";
+import Footer from "@/components/Footer";
+// import Image from "next/image";
+// import styles from "./page.module.css";
+import styles from "@/styles/styles.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/pages/test">Test</Link>
-        </li>
+<div className={styles.container}>
+  <Head>
+    {/* con mayusculas, es componente y agregarlo con link */}
+    <title>Solo mi pagina</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <li>
-          <Link href="/">Contacto</Link>
-        </li>
+  </Head>
 
-      </ul>
-      <h1>Fotitos</h1>
-      <Image src="/ima1.jpg" alt="Imagen 1" width={200} height={200}/>
-      <Image src="/ima2.jpg" alt="Imagen 1" width={200} height={200}/>
-      <Image src="/ima3.jpg" alt="Imagen 1" width={200} height={200}/>
-      
+  {/* barra de navegacion */}
+  <nav className={styles.navbar}>
+    <a href="#" className={styles.navbarBrand}>Home</a>
 
-    </main>
-  );
+    <ul className={styles.navbarNav}>
+      <li className={styles.navItem }>
+        <a href="#" className={styles.navLink}>Ayuda</a>
+      </li>
+
+      <li className={styles.navItem }>
+        <a href="#" className={styles.navLink}>Sesión</a>
+      </li>
+    </ul>
+
+  </nav>  
+
+  {/* contenido principal */}
+
+  <div className={styles.content}>
+    <h1> hola mundo 🍓</h1>
+  </div>
+
+  {/* componente footer */}
+    <Footer/>
+
+
+</div>
+   )
 }
