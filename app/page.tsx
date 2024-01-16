@@ -18,15 +18,15 @@ export default function Home() {
 
   {/* barra de navegacion */}
   <nav className={styles.navbar}>
-    <a href="#" className={styles.navbarBrand}>Home</a>
+    <Link href="#" className={styles.navbarBrand}>Home</Link>
 
     <ul className={styles.navbarNav}>
       <li className={styles.navItem }>
-        <a href="#" className={styles.navLink}>Ayuda</a>
+        <Link href="/pages/ayuda" className={styles.navLink}>Ayuda</Link>
       </li>
 
       <li className={styles.navItem }>
-        <a href="#" className={styles.navLink}>Sesión</a>
+        <Link href="/pages/sesion" className={styles.navLink}>Sesión</Link>
       </li>
     </ul>
 
